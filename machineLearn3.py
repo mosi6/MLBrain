@@ -1,6 +1,6 @@
 """
 A machine learning package with one hidden layer.
-Version 21/12/2020
+Version 23/12/2020
 """
 # Package imports
 import json
