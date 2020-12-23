@@ -329,7 +329,7 @@ def nn_model(X, Y, n_h, num_iterations=None, print_cost=False, alpha=0.1, graph=
             last_best = 0
 
         # Print the cost every 1000 iterations
-        if print_cost and i % 5 == 0:
+        if print_cost and i % 50 == 0:
             print("Cost after iteration %s:\tTrainer %f,\tValitation %f" % (
             i if i != 0 else "0000", cost, cost_validation))
 
@@ -390,9 +390,9 @@ def apply_on_example(arr, parameters):
     results, lo = forward_propagation(arr, parameters)
     l = list(results)
     print(f"the nn's guess: {l.index(max(results))}")
-    print('\n\nhere are the guesses the nn was most confident about(marked with <----):')
-    for i in range(len(l)):
-        print(f"{i} {'<----' if sgn(results)[i] else ''}")
+    # print('\n\nhere are the guesses the nn was most confident about(marked with <----):')
+    # for i in range(len(l)):
+    #     print(f"{i} {'<----' if sgn(results)[i] else ''}")
 
 
 def SaveDict(parameters, name="NN"):
